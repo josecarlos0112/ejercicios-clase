@@ -1,0 +1,14 @@
+# ninja log v5
+1	286	7193228841239014	build.ninja	67c30558e61d331a
+47	118	7191687277967341	ejercicios_clase.exe	1e898feafafab135
+9	895	7193227224330412	CMakeFiles/main.dir/main.cpp.obj	d952120689e34ab7
+0	357	7191695618367226	CMakeFiles/funcionsuma.dir/funcionsuma.cpp.obj	8d5f4a997123dcd4
+2	46	7191687277287110	CMakeFiles/ejercicios_clase.dir/funcionsuma.cpp.obj	8c94513d182dfe92
+0	347	7191679393043218	CMakeFiles/ejercicios_clase.dir/main.cpp.obj	1bf9405180c9a1cb
+347	419	7191711734992172	main.exe	27f0d23924c76470
+357	438	7191695619141716	funcionsuma.exe	e6f8943800103ce2
+2	382	7191856638032927	CMakeFiles/persona.dir/persona.cpp.obj	9df3b14b52f6269b
+382	473	7191856638920635	persona.exe	74c156709f9d01f6
+4	496	7193219544545964	CMakeFiles/estudiante.dir/estudiante.cpp.obj	c96c4e87f18a7c50
+28	893	7193227224310432	CMakeFiles/main.dir/persona.cpp.obj	a63447d1999f2e8
+21	901	7193227224394641	CMakeFiles/main.dir/estudiante.cpp.obj	383108d9a0d1e05b
