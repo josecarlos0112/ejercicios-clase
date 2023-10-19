@@ -10,17 +10,19 @@
 using namespace std;
 
 class Persona {
+    //Ponemos los atributos de la persona
     string nombre;
     int edad;
     string genero;
 
-public:
-    void setNombre(const string &nombre);
-    string getNombre();
-    void setEdad(int edad);
-    int getEdad();
-    void setGenero(const string &genero);
-    string getGenero();
+    //Le ponemos los metodos por clase
+    public:
+        void setNombre(const string &nombre);
+        string getNombre();
+        void setEdad(int edad);
+        int getEdad();
+        void setGenero(const string &genero);
+        string getGenero();
 };
 
 #endif

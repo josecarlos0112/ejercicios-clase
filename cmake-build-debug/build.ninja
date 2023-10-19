@@ -41,40 +41,7 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/usuario/Documents/GitHub/ejercicios-clase/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target main
-
-
-#############################################
-# Order-only phony target for main
-
-build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
-
-build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/usuario/Documents/GitHub/ejercicios-clase/main.cpp || cmake_object_order_depends_target_main
-  DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\main.dir
-  OBJECT_FILE_DIR = CMakeFiles\main.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target main
-
-
-#############################################
-# Link the executable main.exe
-
-build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\main.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = main.exe
-  TARGET_IMPLIB = libmain.dll.a
-  TARGET_PDB = main.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target persona
+# Object build statements for STATIC_LIBRARY target persona
 
 
 #############################################
@@ -90,24 +57,22 @@ build CMakeFiles/persona.dir/persona.cpp.obj: CXX_COMPILER__persona_unscanned_De
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target persona
+# Link build statements for STATIC_LIBRARY target persona
 
 
 #############################################
-# Link the executable persona.exe
+# Link the static library libpersona.a
 
-build persona.exe: CXX_EXECUTABLE_LINKER__persona_Debug CMakeFiles/persona.dir/persona.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build libpersona.a: CXX_STATIC_LIBRARY_LINKER__persona_Debug CMakeFiles/persona.dir/persona.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\persona.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = persona.exe
-  TARGET_IMPLIB = libpersona.dll.a
-  TARGET_PDB = persona.exe.dbg
+  TARGET_FILE = libpersona.a
+  TARGET_PDB = persona.a.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target estudiante
+# Object build statements for STATIC_LIBRARY target estudiante
 
 
 #############################################
@@ -123,21 +88,52 @@ build CMakeFiles/estudiante.dir/estudiante.cpp.obj: CXX_COMPILER__estudiante_uns
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target estudiante
+# Link build statements for STATIC_LIBRARY target estudiante
 
 
 #############################################
-# Link the executable estudiante.exe
+# Link the static library libestudiante.a
 
-build estudiante.exe: CXX_EXECUTABLE_LINKER__estudiante_Debug CMakeFiles/estudiante.dir/estudiante.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build libestudiante.a: CXX_STATIC_LIBRARY_LINKER__estudiante_Debug CMakeFiles/estudiante.dir/estudiante.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\estudiante.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = estudiante.exe
-  TARGET_IMPLIB = libestudiante.dll.a
-  TARGET_PDB = estudiante.exe.dbg
+  TARGET_FILE = libestudiante.a
+  TARGET_PDB = estudiante.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target main
+
+
+#############################################
+# Order-only phony target for main
+
+build cmake_object_order_depends_target_main: phony || cmake_object_order_depends_target_estudiante cmake_object_order_depends_target_persona
+
+build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/usuario/Documents/GitHub/ejercicios-clase/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target main
+
+
+#############################################
+# Link the executable main.exe
+
+build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj | libpersona.a libestudiante.a || libestudiante.a libpersona.a
+  FLAGS = -g
+  LINK_LIBRARIES = libpersona.a  libestudiante.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = main.exe
+  TARGET_IMPLIB = libmain.dll.a
+  TARGET_PDB = main.exe.dbg
 
 
 #############################################
@@ -165,11 +161,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build estudiante: phony estudiante.exe
+build estudiante: phony libestudiante.a
 
 build main: phony main.exe
 
-build persona: phony persona.exe
+build persona: phony libpersona.a
 
 # =============================================================================
 # Folder targets.
@@ -179,7 +175,7 @@ build persona: phony persona.exe
 #############################################
 # Folder: C:/Users/usuario/Documents/GitHub/ejercicios-clase/cmake-build-debug
 
-build all: phony main.exe persona.exe estudiante.exe
+build all: phony libpersona.a libestudiante.a main.exe
 
 # =============================================================================
 # Built-in targets

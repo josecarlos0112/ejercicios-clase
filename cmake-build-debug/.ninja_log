@@ -1,14 +1,20 @@
 # ninja log v5
-1	286	7193228841239014	build.ninja	67c30558e61d331a
-47	118	7191687277967341	ejercicios_clase.exe	1e898feafafab135
-9	895	7193227224330412	CMakeFiles/main.dir/main.cpp.obj	d952120689e34ab7
 0	357	7191695618367226	CMakeFiles/funcionsuma.dir/funcionsuma.cpp.obj	8d5f4a997123dcd4
-2	46	7191687277287110	CMakeFiles/ejercicios_clase.dir/funcionsuma.cpp.obj	8c94513d182dfe92
+4	490	7193680994139747	CMakeFiles/main.dir/main.cpp.obj	d952120689e34ab7
+47	118	7191687277967341	ejercicios_clase.exe	1e898feafafab135
+0	209	7194067679539596	build.ninja	67c30558e61d331a
 0	347	7191679393043218	CMakeFiles/ejercicios_clase.dir/main.cpp.obj	1bf9405180c9a1cb
+2	46	7191687277287110	CMakeFiles/ejercicios_clase.dir/funcionsuma.cpp.obj	8c94513d182dfe92
 347	419	7191711734992172	main.exe	27f0d23924c76470
 357	438	7191695619141716	funcionsuma.exe	e6f8943800103ce2
-2	382	7191856638032927	CMakeFiles/persona.dir/persona.cpp.obj	9df3b14b52f6269b
-382	473	7191856638920635	persona.exe	74c156709f9d01f6
-4	496	7193219544545964	CMakeFiles/estudiante.dir/estudiante.cpp.obj	c96c4e87f18a7c50
+5	482	7193601554578731	CMakeFiles/persona.dir/persona.cpp.obj	9df3b14b52f6269b
+483	657	7193601556285638	persona.exe	74c156709f9d01f6
+3	421	7193668502608457	CMakeFiles/estudiante.dir/estudiante.cpp.obj	c96c4e87f18a7c50
 28	893	7193227224310432	CMakeFiles/main.dir/persona.cpp.obj	a63447d1999f2e8
 21	901	7193227224394641	CMakeFiles/main.dir/estudiante.cpp.obj	383108d9a0d1e05b
+12	707	7194067737030896	CMakeFiles/persona.dir/persona.cpp.obj	9df3b14b52f6269b
+24	715	7194067737040861	CMakeFiles/estudiante.dir/estudiante.cpp.obj	c96c4e87f18a7c50
+18	736	7194067737311385	CMakeFiles/main.dir/main.cpp.obj	d952120689e34ab7
+708	824	7194067738202514	libpersona.a	1c9aeb85cace60e2
+715	825	7194067738202514	libestudiante.a	b689e0cdc7c65f74
+825	965	7194067739566115	main.exe	1be84e8e1c6a8cb5

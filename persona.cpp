@@ -29,17 +29,3 @@ void Persona::setGenero(const string &genero) {
 string Persona::getGenero() {
     return genero;
 }
-
-int main() {
-    Persona persona;
-
-    persona.setNombre("Anastacio");
-    persona.setEdad(10);
-    persona.setGenero("No definido");
-
-    cout << "Nombre: " << persona.getNombre() << endl;
-    cout << "Edad: " << persona.getEdad() << endl;
-    cout << "Genero: " << persona.getGenero() << endl;
-
-    return 0;
-}

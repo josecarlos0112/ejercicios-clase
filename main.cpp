@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include "persona.h"
-#include "estudiante.h"
+#include "Persona.h"
+#include "Estudiante.h"
 
 using namespace std;
 
@@ -22,18 +22,18 @@ int main() {
     persona.setEdad(10);
     persona.setGenero("No definido");
 
+
     cout << "Nombre: " << persona.getNombre() << endl;
     cout << "Edad: " << persona.getEdad() << endl;
     cout << "Genero: " << persona.getGenero() << endl;
 
     Estudiante miEstudiante;
-    miEstudiante.setNombre("Anastacio");
-    miEstudiante.setEdad(10);
-    miEstudiante.setGenero("No definido");
-    miEstudiante.setGrado("Secundaria");
+    miEstudiante.setNombre("Andrea");
+    miEstudiante.setEdad(21);
+    miEstudiante.setGenero("Femenino");
+    miEstudiante.setGrado("Bachillerato");
 
     miEstudiante.mostrarDetalles();
 
     return 0;
 }
-

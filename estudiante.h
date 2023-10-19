@@ -8,15 +8,15 @@
 #include <string>
 #include "persona.h"
 
-using namespace std;
 
 class Estudiante : public Persona {
-    string grado;
+    std::string grado;
 
 public:
     void setGrado(const string &grado);
-    string getGrado();
+    std::string getGrado();
     void mostrarDetalles();
 };
+
 
 #endif
